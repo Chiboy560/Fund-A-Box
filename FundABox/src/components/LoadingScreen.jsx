@@ -1,7 +1,7 @@
 // components/LoadingScreen.jsx
 import React from "react";
 //import "../styles/LoadingScreen.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/loading.png";
 const LoadingScreen = () => {
   return (
     <div className="loading-container">

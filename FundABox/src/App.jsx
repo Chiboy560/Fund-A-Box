@@ -14,7 +14,7 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 750);
+    }, 1500);
   }, []);
 
   const handleLogin = () => {

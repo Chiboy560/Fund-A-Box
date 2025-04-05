@@ -1,14 +1,16 @@
 /* styles/LoadingScreen.css */
 .loading-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: white; /* Adjust as needed */
-  }
-  
-  .loading-logo {
-    width: 200px; /* Adjust size */
-    height: auto;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(217, 246, 207);
+  /* Adjust as needed */
+}
+
+.loading-logo {
+  width: 500px;
+  /* Adjust size */
+  height: auto;
+}
   
