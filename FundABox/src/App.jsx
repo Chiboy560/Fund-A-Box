@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import LoadingScreen from "./components/LoadingScreen"; // Import the Loading Screen
-import Auth from './components/Auth'; // Import the Auth component
+import auth from './components/auth'; // Import the Auth component
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -21,9 +21,9 @@ const App = () => {
     return <LoadingScreen />;
   }
 
-  if (!isAuthenticated) {
+  /*if (!isAuthenticated) {
     return <Auth onLogin={handleLogin} />;
-  }
+  }*/
 
   return <Navbar />;
 };
