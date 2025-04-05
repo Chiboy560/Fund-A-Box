@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { auth } from "../config/firebase";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth"; // ✅ use this one
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
 const Auth = ({ onLogin }) => {
   const [email, setEmail] = useState("");
@@ -8,11 +9,22 @@ const Auth = ({ onLogin }) => {
 
   const signIn = async () => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(auth, email, password); // ✅ correct function
       console.log("User signed in!");
-      onLogin(); // Call the onLogin function to update the authentication status
+      onLogin?.();
     } catch (error) {
       console.error("Error signing in:", error.message);
+    }
+  };
+
+  const signInWithGoogle = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+      console.log("Signed in with Google");
+      onLogin?.();
+    } catch (error) {
+      console.error("Google Sign-In Error:", error.message);
     }
   };
 
@@ -34,10 +46,17 @@ const Auth = ({ onLogin }) => {
           onChange={(e) => setPass(e.target.value)}
         />
         <button
-          className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition duration-200"
+          className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition duration-200"
           onClick={signIn}
         >
-          Sign in
+          Sign In
+        </button>
+
+        <button
+          className="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 transition duration-200 mt-2"
+          onClick={signInWithGoogle}
+        >
+          Sign in with Google
         </button>
       </div>
     </div>
