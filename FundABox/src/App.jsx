@@ -1,19 +1,31 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-import Navbar from './components/Navbar';
-import { Auth } from './components/auth'; // or default import if you exported it that way
+import React, { useState, useEffect } from "react";
+import Navbar from "./components/Navbar";
+import LoadingScreen from "./components/LoadingScreen"; // Import the Loading Screen
+import Auth from './components/Auth'; // Import the Auth component
 
 const App = () => {
-  return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<h1>Home Page</h1>} />
-        <Route path="/auth" element={<Auth />} />
-      </Routes>
-    </Router>
-  );
+  const [loading, setLoading] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+  }, []);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  if (loading) {
+    return <LoadingScreen />;
+  }
+
+  if (!isAuthenticated) {
+    return <Auth onLogin={handleLogin} />;
+  }
+
+  return <Navbar />;
 };
 
 export default App;
