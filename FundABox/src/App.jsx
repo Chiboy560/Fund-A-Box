@@ -1,6 +1,7 @@
+// App.jsx
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import LoadingScreen from "./components/LoadingScreen"; // Import the Loading Screen
+import LoadingScreen from "./components/LoadingScreen";
 
 const App = () => {
   const [loading, setLoading] = useState(true);

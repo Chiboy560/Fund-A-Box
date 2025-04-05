@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet');
 @import "tailwindcss";
-@import './styles/custom.css';
-import { LoadingScreen } from './LoadingScreen';
+@import './LoadingScreen.css';
 
 :root {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
