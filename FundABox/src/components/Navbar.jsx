@@ -24,16 +24,19 @@ const Navbar = ({ onLogout }) => {
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12">
             <Link to='/'>
-              <li>Home</li>
+              <li className='hover:text-green-700'>Home</li>
             </Link>
             <Link to='/guide'>
-              <li>Guide</li>
+              <li className='hover:text-green-700'>Guide</li>
             </Link>
             <Link to='/feed'>
-              <li>Feed</li>
+              <li className='hover:text-green-700'>Feed</li>
             </Link>
             <Link to='/donate'>
-              <li>Donate</li>
+              <li className='hover:text-green-700'>Donate</li>
+            </Link>
+            <Link to='/map'>
+              <li className='hover:text-green-700'>Map</li>
             </Link>
             <li>
               <button onClick={logout}>Logout</button>

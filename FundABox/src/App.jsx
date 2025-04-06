@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Guide from './pages/Guide';
 import Feed from './pages/Feed';
 import Donate from './pages/Donate';
+import Map from './pages/Map';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { auth } from './config/firebase'; // import Firebase authentication
 import { onAuthStateChanged } from "firebase/auth"; // import onAuthStateChanged to track auth state
@@ -56,6 +57,7 @@ const App = () => {
         <Route path="/guide" element={<Guide />} />
         <Route path="/feed" element={<Feed />} />
         <Route path="/donate" element={<Donate />} />
+        <Route path="/map" element={<Map />}/>
       </Routes>
     </Router>
   );
