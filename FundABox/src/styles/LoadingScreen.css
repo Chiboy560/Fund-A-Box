@@ -8,6 +8,9 @@
   /* Adjust as needed */
 }
 
+.background{
+  background-color: rgb(217, 246, 207);
+}
 .loading-logo {
   width: 500px;
   /* Adjust size */

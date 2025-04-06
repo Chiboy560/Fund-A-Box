@@ -50,16 +50,18 @@ const App = () => {
   }
 
   return (
+    <div className="background">
     <Router>
-      <Navbar onLogout={handleLogout} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/guide" element={<Guide />} />
-        <Route path="/feed" element={<Feed />} />
-        <Route path="/donate" element={<Donate />} />
-        <Route path="/map" element={<Map />}/>
-      </Routes>
-    </Router>
+        <Navbar onLogout={handleLogout} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/guide" element={<Guide />} />
+          <Route path="/feed" element={<Feed />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/map" element={<Map />}/>
+        </Routes>
+      </Router>
+    </div>
   );
 };
 
