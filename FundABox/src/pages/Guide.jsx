@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import Card from '../components/Card';
+import Card from '../components/card';
 import apple from '../assets/apple.png';
 import cucumber from '../assets/cucumber.png';
 import tomatoe from '../assets/tomato.png';
 import potato from '../assets/potato.png';
 import beans from '../assets/beans.png';
 import radish from '../assets/radish.png';
+import PlantIdentifier from '../components/plantID';
+import Chatbot from '../components/chatbot'
 
 const Guide = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -293,7 +295,8 @@ const Guide = () => {
           </div>
         )}
       </div>
-      
+        <PlantIdentifier />
+        <Chatbot />
       </div>
       
     
