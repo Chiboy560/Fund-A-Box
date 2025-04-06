@@ -12,11 +12,11 @@ const Feed = () => {
             </div>
             <div className="flex  justify-center min-h-screen bg-white">
                 <Card
-                  imagePath={logo}  // Pass the imported image directly
-                  title={"Title"}  // Static data for now
-                  text={"Text"}  // Static content
-                  tags={["#gardening", "#community", "#fundabox"]}  // Static tags for now
-                  height="500px"  // Pass the custom height as a prop
+                  imagePath={logo}  
+                  title={"Title"}  
+                  text={"Text"} 
+                  tags={["#gardening", "#community", "#fundabox"]}
+                  height="500px"  
                 />
             </div>
         </div>

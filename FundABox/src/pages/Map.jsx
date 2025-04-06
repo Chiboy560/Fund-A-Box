@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Loader } from "@googlemaps/js-api-loader";
 
 const Map = () => {
-  <div></div>
   useEffect(() => {
     const loader = new Loader({
       apiKey: "AIzaSyBj5BiUpn_KCk-olCVGnWretgcTE3HXDJA",
@@ -35,7 +34,7 @@ const Map = () => {
                 title: place.name,
               });
 
-              const infoWindow = new window.google.maps.InfoWindow({
+              const info = new window.google.maps.InfoWindow({
                 content: `
                   <div>
                     <h2 class="text-lg font-bold">${place.name}</h2>
@@ -45,7 +44,7 @@ const Map = () => {
               });
 
               marker.addListener("click", () => {
-                infoWindow.open(map, marker);
+                info.open(map, marker);
               });
             }
           });
