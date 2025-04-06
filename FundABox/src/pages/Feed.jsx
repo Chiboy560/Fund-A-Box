@@ -10,13 +10,13 @@ const Feed = () => {
             <div>
                 <h1 className="text-center text-3xl font-semibold py-4">Feed</h1>
             </div>
-            <div className="flex  justify-center min-h-screen bg-white">
+            <div className="flex justify-center min-h-screen bg-white">
                 <Card
                   imagePath={logo}  
                   title={"Title"}  
                   text={"Text"} 
                   tags={["#gardening", "#community", "#fundabox"]}
-                  height="500px"  
+                  height="600px"  
                 />
             </div>
         </div>
